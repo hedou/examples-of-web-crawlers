@@ -452,8 +452,8 @@ def get_history_data(history_file_path):
 cd 目录名
 # 先卸载依赖库
 pip uninstall -y -r requirement.txt
-# 再重新安装依赖库
-pip install -r requirement.txt
+# 在新环境中安装兼容的依赖：
+python -m pip install werkzeug==0.16.0 Flask==1.1.2 dash==1.1.0 jinja2==2.11.3 MarkupSafe==2.0.1 itsdangerous==1.1.0
 # 开始运行
 python app.py
 
